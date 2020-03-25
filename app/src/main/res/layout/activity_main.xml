@@ -5,8 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.MainActivity">
-
+    <include
+        android:id="@+id/titleview"
+        layout="@layout/layout_title"/>
     <FrameLayout
+        android:layout_below="@+id/titleview"
         android:layout_above="@+id/magic_indicator"
         android:id="@+id/fl_fragment_content"
         android:layout_width="match_parent"

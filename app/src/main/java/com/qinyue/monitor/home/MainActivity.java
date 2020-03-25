@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity {
     CommonNavigator commonNavigator;
     @Override
     public String initTitleText() {
-        return "";
+        return "首页";
     }
 
     @Override
@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-
+        setTitleIconLeftVisible(false);
     }
 
     @Override
@@ -194,10 +194,13 @@ public class MainActivity extends BaseActivity {
         fragmentTransaction.commitAllowingStateLoss();
         switch (list.get(index)){
             case "首页":
+                setTitleText("首页");
                 break;
             case "办事":
+                setTitleText("办事");
                 break;
             case "个人中心":
+                setTitleText("个人中心");
                 break;
         }
     }
