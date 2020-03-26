@@ -1,9 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="我"
-        android:layout_height="wrap_content"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bkg"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout style="@style/PullDownStyle">
+
+        <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_10">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_login"
+                    android:layout_height="@dimen/dp_70"
+                    app:sRightIconRes="@null">
+
+                    <com.xuexiang.xui.widget.imageview.RadiusImageView
+                        android:id="@+id/riv_head_pic"
+                        style="@style/RadiusImageView.Circle"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/sLeftImgId"
+                        app:srcCompat="@drawable/ic_default_head"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <TextView
+                        android:id="@+id/text_login"
+                        style="@style/default_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/riv_head_pic"
+                        android:text="点击注册/登录" />
+                </com.xuexiang.xui.widget.textview.supertextview.SuperTextView>
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_my"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:sLeftTextString="我的信息"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_msg"
+                    app:sLeftTextString="通知"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_xf"
+                    app:sLeftTextString="我的信访"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="我的预约"
+                    android:id="@+id/view_yy"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="群众意见箱"
+                    android:id="@+id/view_qzyjx"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sDividerLineType="none"
+                    android:id="@+id/view_jczxx"
+                    app:sLeftTextString="检察长信箱"
+                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sRightIconRes="@null"
+                    android:id="@+id/view_logout"
+                    app:sCenterViewGravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:sCenterTextString="退出登录"
+                    app:sDividerLineType="none"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>
