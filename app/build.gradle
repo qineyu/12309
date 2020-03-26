@@ -56,4 +56,14 @@ dependencies {
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    //网络请求
+    implementation 'com.rxjava.rxhttp:rxhttp:2.1.0' //必须
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:2.1.0' //注解处理器，生成RxHttp类,必须
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'  //切换主线程，Android工程必须
+    //工具类
+//    implementation 'com.blankj:utilcodex:1.26.0'
 }

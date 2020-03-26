@@ -20,7 +20,9 @@ import android.widget.Toast;
 
 
 import com.qinyue.monitor.R;
+import com.xuexiang.xui.utils.WidgetUtils;
 import com.xuexiang.xui.widget.actionbar.TitleBar;
+import com.xuexiang.xui.widget.dialog.MiniLoadingDialog;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -40,6 +42,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected final String TAG = "这是" + this.getClass().getCanonicalName();
     private int netMobile;
     ImageView ivTitleRight;
+   public MiniLoadingDialog miniLoadingDialog;
     private boolean isShowImgStrLef = false;
     TitleBar titleBar;
     @Override
@@ -50,6 +53,7 @@ public abstract class BaseActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(getLayoutID());
         ButterKnife.bind(this);
+        miniLoadingDialog = WidgetUtils.getMiniLoadingDialog(this);
         //打印是哪个activity
         Log.e("BaseActivity", this.getLocalClassName() + "Activity");
         //判断是否需要沉浸式

@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/theme_color</item>
         <item name="colorPrimaryDark">@color/theme_color</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/line_color</item>
         <item name="xui_actionbar_height">?actionBarSize</item>
         <item name="xui_actionbar_color">@color/theme_color</item>
     </style>

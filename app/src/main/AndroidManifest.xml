@@ -36,6 +36,9 @@
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.VerificationActivity" />
+        <activity android:name=".login.PwdLoginActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
