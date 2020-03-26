@@ -56,12 +56,12 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initview() {
         list.add("首页");
-        listImgYes.add(R.mipmap.ic_launcher);
-        listImgYes.add(R.mipmap.ic_launcher);
-        listImgYes.add(R.mipmap.ic_launcher);
-        listImgNo.add(R.mipmap.ic_launcher_round);
-        listImgNo.add(R.mipmap.ic_launcher_round);
-        listImgNo.add(R.mipmap.ic_launcher_round);
+        listImgYes.add(R.mipmap.icon_first_yes);
+        listImgYes.add(R.mipmap.icon_work_yes);
+        listImgYes.add(R.mipmap.icon_my_yes);
+        listImgNo.add(R.mipmap.icon_first_no);
+        listImgNo.add(R.mipmap.icon_work_no);
+        listImgNo.add(R.mipmap.icon_my_no);
         list.add("办事");
         list.add("个人中心");
         mFragments.add(new FirstFragment());
@@ -117,12 +117,12 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onSelected(int index, int totalCount) {
-                        titleText.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.theme_color));
+                        titleText.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.home_color));
                         titleImg.setImageResource(listImgYes.get(i));
-                        RelativeLayout.LayoutParams layoutParams =(RelativeLayout.LayoutParams) titleImg.getLayoutParams();
-                        layoutParams.width= ConvertUtils.dp2px(35);
-                        layoutParams.height=ConvertUtils.dp2px(35);
-                        titleImg.setLayoutParams(layoutParams);
+//                        RelativeLayout.LayoutParams layoutParams =(RelativeLayout.LayoutParams) titleImg.getLayoutParams();
+//                        layoutParams.width= ConvertUtils.dp2px(35);
+//                        layoutParams.height=ConvertUtils.dp2px(35);
+//                        titleImg.setLayoutParams(layoutParams);
 
                     }
 
@@ -130,10 +130,10 @@ public class MainActivity extends BaseActivity {
                     public void onDeselected(int index, int totalCount) {
                         titleText.setTextColor(Color.parseColor("#666666"));
                         titleImg.setImageResource(listImgNo.get(i));
-                        RelativeLayout.LayoutParams layoutParams =(RelativeLayout.LayoutParams) titleImg.getLayoutParams();
-                        layoutParams.width=ConvertUtils.dp2px(20);
-                        layoutParams.height=ConvertUtils.dp2px(20);
-                        titleImg.setLayoutParams(layoutParams);
+//                        RelativeLayout.LayoutParams layoutParams =(RelativeLayout.LayoutParams) titleImg.getLayoutParams();
+//                        layoutParams.width=ConvertUtils.dp2px(20);
+//                        layoutParams.height=ConvertUtils.dp2px(20);
+//                        titleImg.setLayoutParams(layoutParams);
                     }
 
                     @Override

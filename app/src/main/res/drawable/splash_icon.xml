@@ -7,9 +7,4 @@
             android:gravity="top"
             android:src="@mipmap/splash_top_icon_xx"/>
     </item>
-    <item>
-        <bitmap
-            android:gravity="bottom"
-            android:src="@mipmap/splash_bottom_icon_xx"/>
-    </item>
 </layer-list>

@@ -5,13 +5,16 @@
     <color name="colorAccent">#ffffff</color>
 
     <color name="splash_bkg">#63bf73</color>
+    <color name="white">#ffffff</color>
     <color name="theme_color">#ffffff</color>
+    <color name="home_color">#EBC800</color>
     <color name="theme_dark_color">#ffffff</color>
     <color name="text_emphasize_on">#FF6363</color>
     <color name="text_color">#302F30</color>
     <color name="text_color_no">#C9C8C9</color>
     <color name="text_color_blue">#26265E</color>
     <color name="line_color">#C9C8C9</color>
+    <color name="yl_color">#F0EFF0</color>
     <color name="default_bkg">#EBE9EB</color>
     <color name="but_bkg_start">#197DAA</color>
     <color name="but_bkg_end">#44C8FA</color>

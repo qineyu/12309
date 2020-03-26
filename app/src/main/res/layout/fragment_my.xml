@@ -49,39 +49,39 @@
                     android:id="@+id/view_my"
                     android:layout_marginTop="@dimen/dp_10"
                     app:sLeftTextString="我的信息"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
                     android:id="@+id/view_msg"
                     app:sLeftTextString="通知"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
                     android:id="@+id/view_xf"
                     app:sLeftTextString="我的信访"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
                     app:sLeftTextString="我的预约"
                     android:id="@+id/view_yy"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
                     app:sLeftTextString="群众意见箱"
                     android:id="@+id/view_qzyjx"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
                     app:sDividerLineType="none"
                     android:id="@+id/view_jczxx"
                     app:sLeftTextString="检察长信箱"
-                    app:sLeftTvDrawableLeft="@drawable/ic_delete_photo" />
+                    app:sLeftTvDrawableLeft="@drawable/ic_most" />
 
                 <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
                     style="@style/InfoItem.Account"
