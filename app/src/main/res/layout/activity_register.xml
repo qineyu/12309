@@ -258,6 +258,7 @@
                         tools:ignore="VectorDrawableCompat" />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:paddingBottom="@dimen/dp_5"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_width="match_parent"
@@ -278,6 +279,7 @@
                         />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:paddingBottom="@dimen/dp_5"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_width="match_parent"
@@ -298,6 +300,7 @@
                         />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
@@ -322,6 +325,7 @@
                         tools:ignore="VectorDrawableCompat" />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                 android:paddingBottom="@dimen/dp_5"
                 android:id="@+id/choose_lsz"
                 android:layout_marginTop="@dimen/dp_10"
@@ -375,6 +379,7 @@
                     tools:ignore="VectorDrawableCompat" />
             </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:paddingBottom="@dimen/dp_5"
                     android:id="@+id/choose_lsz_time"
                     android:layout_marginTop="@dimen/dp_10"
@@ -428,6 +433,7 @@
                         tools:ignore="VectorDrawableCompat" />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:paddingBottom="@dimen/dp_5"
                     android:id="@+id/choose_sfz"
                     android:layout_marginTop="@dimen/dp_10"
@@ -481,6 +487,7 @@
                         tools:ignore="VectorDrawableCompat" />
                 </RelativeLayout>
                 <RelativeLayout
+                    android:visibility="gone"
                     android:paddingBottom="@dimen/dp_5"
                     android:id="@+id/choose_sfz_time"
                     android:layout_marginTop="@dimen/dp_10"

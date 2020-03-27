@@ -108,11 +108,6 @@ public class PwdLoginActivity extends BaseActivity {
         String phone =new String(EncodeUtils.base64Encode(phoneEdit.getEditValue())) ;
         String pwd =new String(EncodeUtils.base64Encode(pwdEdit.getEditValue())) ;
         String md5 = Base64Converter.encrypt32(phoneEdit.getEditValue()+pwdEdit.getEditValue()+"123456");
-        Map<String,String > map = new HashMap<>();
-        map.put("username",phone);
-        map.put("password",pwd);
-        map.put("secretKey",md5);
-        String data = new Gson().toJson(map);
         RxHttp.postForm(TagConstant.BASEURL+ NetConstant.loginByPwd)  //发送表单形式的Post请求
                 .add("appId",TagConstant.APPID)
                 .add("code",TagConstant.CODE)
@@ -123,25 +118,48 @@ public class PwdLoginActivity extends BaseActivity {
                 .observeOn(AndroidSchedulers.mainThread())//返回String类型
                 .subscribe(s -> {          //订阅观察者，
                     //请求成功
-                    miniLoadingDialog.dismiss();
                     BaseBean<UserBean> beanBaseBean = s;
                     if (beanBaseBean.getCode()==101){
-                        XToast.success(PwdLoginActivity.this,beanBaseBean.getMsg());
-                        SPUtils.putObject(SPUtils.getDefaultSharedPreferences(),TagConstant.USERTAG,beanBaseBean.getData());
-                        MyFragment.logTagChanged.postValue(true);
-                        setResult(101);
-                        finish();
+                        getUserMsg(beanBaseBean.getData().getId());
                     }else {
-                        XToast.error(PwdLoginActivity.this,beanBaseBean.getMsg());
+                        XToast.error(PwdLoginActivity.this,beanBaseBean.getMsg()).show();
                     }
                 }, throwable -> {
                     //请求失败
                     miniLoadingDialog.dismiss();
-                    XToast.error(PwdLoginActivity.this,"登录失败 "+throwable.getMessage());
+                    XToast.error(PwdLoginActivity.this,"登录失败 "+throwable.getMessage()).show();
                 });
 
     }
-
+    @SuppressLint("CheckResult")
+    private void getUserMsg(String id){
+        Map<String,String> map = new HashMap<>();
+        map.put("userId",id);
+        String s2 = new Gson().toJson(map);
+        id =Base64Converter.AESEncode(TagConstant.AESKEY,s2) ;
+        RxHttp.postForm(TagConstant.BASEURL+NetConstant.getMyInfo)
+                .add("appId",TagConstant.APPID)
+                .add("code",TagConstant.CODE)
+                .add("data",id)
+                .asObject(MyUserBean.class)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(s ->{
+                    miniLoadingDialog.dismiss();
+                    MyUserBean myUserBean = s;
+                    if (myUserBean.getBaseUser()==null){
+                        XToast.error(PwdLoginActivity.this,"获取用户信息失败").show();
+                    }else {
+                        XToast.success(PwdLoginActivity.this, "登录成功").show();
+                        SPUtils.putObject(SPUtils.getDefaultSharedPreferences(), TagConstant.USERTAG, myUserBean);
+                        MyFragment.logTagChanged.postValue(true);
+                        setResult(101);
+                        finish();
+                    }
+                },throwable ->{
+                    miniLoadingDialog.dismiss();
+                    XToast.error(PwdLoginActivity.this,"登录失败 "+throwable.getMessage()).show();
+                });
+    }
     @Override
     protected Boolean status() {
         return false;

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/default_bkg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/titleview"
+        layout="@layout/layout_title"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout style="@style/PullDownStyle">
+
+        <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_10">
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_head"
+                    android:layout_height="@dimen/dp_70"
+                    app:sLeftIconRes="@null"
+                    app:sLeftTextString="头像"
+                    app:sRightIconRes="@null">
+
+                    <com.xuexiang.xui.widget.imageview.RadiusImageView
+                        android:id="@+id/riv_head_pic"
+                        style="@style/RadiusImageView.Circle"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/sRightImgId"
+                        app:srcCompat="@drawable/ic_default_head"
+                        tools:ignore="VectorDrawableCompat" />
+                </com.xuexiang.xui.widget.textview.supertextview.SuperTextView>
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_name"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:sLeftTextString="姓名:"
+                    app:sRightTextColor="@color/text_color"
+                    app:sLeftIconRes="@null"
+                    app:sRightIconRes="@null"
+                     />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_sex"
+                    app:sLeftTextString="性别:"
+                    app:sRightTextColor="@color/text_color"
+                    app:sLeftIconRes="@null"
+                    app:sRightIconRes="@null" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    android:id="@+id/view_phone"
+                    app:sLeftTextString="手机号码:"
+                    app:sRightTextColor="@color/text_color"
+                    app:sLeftIconRes="@null"
+                    app:sRightIconRes="@null" />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="身份证号码:"
+                    android:id="@+id/view_idcard"
+                    app:sRightTextColor="@color/text_color"
+                    app:sLeftIconRes="@null"
+                    app:sRightIconRes="@null" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="邮箱:"
+                    app:sRightTextColor="@color/text_color"
+                    android:id="@+id/view_email"
+                    app:sLeftIconRes="@null"
+                    app:sRightIconRes="@null" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sDividerLineType="none"
+                    android:id="@+id/view_address"
+                    app:sLeftTextString="家庭住址:"
+                    app:sLeftIconRes="@null"
+                    app:sRightTextColor="@color/text_color"
+                    app:sRightIconRes="@null" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sRightIconRes="@null"
+                    android:id="@+id/view_edit"
+                    app:sCenterViewGravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    app:sCenterTextString="修改"
+                    app:sDividerLineType="none"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

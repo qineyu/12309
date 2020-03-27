@@ -39,6 +39,8 @@
         <activity android:name=".login.RegisterActivity" />
         <activity android:name=".login.VerificationActivity" />
         <activity android:name=".login.PwdLoginActivity" />
+        <activity android:name=".my.MyMsgActivity" />
+        <activity android:name=".my.EditMyMsgActivty" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
